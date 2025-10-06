@@ -96,3 +96,37 @@ reset.addEventListener("click", () => {
     b.value = "";
     body.style.backgroundColor = "white";
 })
+
+// Simple To-Do List
+const task = document.querySelector("#task");
+const addTask = document.querySelector("#addTask");
+const taskList = document.querySelector("#tasklist") ;
+
+function newTask() {
+    if(task.value.trim() === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    const li = document.createElement("li");
+    const delBtn = document.createElement("button");
+
+    delBtn.textContent = "Delete";
+    li.textContent = `${task.value} `;
+    taskList.append(li);
+    li.append(delBtn);
+
+    delBtn.addEventListener("click", () => {
+        li.remove();
+    });
+
+    task.value = "";
+    task.focus();
+}
+addTask.addEventListener("click", newTask);
+
+task.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        newTask();
+    }
+});
