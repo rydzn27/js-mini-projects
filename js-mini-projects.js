@@ -130,3 +130,17 @@ task.addEventListener("keydown", (e) => {
         newTask();
     }
 });
+
+// Image Gallery
+const mainImage = document.querySelector("#main-image");
+const thumbnailImages = document.querySelectorAll(".thumbnail");
+
+thumbnailImages.forEach(image => {
+    image.addEventListener("click", () => {
+       mainImage.src = image.src;
+        // Remove "active" from all thumbnails
+       thumbnailImages.forEach(img => img.classList.remove("active"));
+         // Add "active" to the clicked one
+        image.classList.add("active");
+    });
+});

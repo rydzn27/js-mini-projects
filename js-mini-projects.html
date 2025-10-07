@@ -3,49 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js-mini-projects.css">
     <script src="js-mini-projects.js" defer></script>
     <title>JS Mini Projects</title>
 </head>
 <body>
+    
     <h1>Javascript Mini Projects</h1>
     
-    <h2>Live Character Counter</h2>
+    <nav>
+        <ul>
+            <li><a href="#live-character-counter">Character Counter</a></li>
+            <li><a href="#simple-calculator">Simple Calculator</a></li>
+            <li><a href="#dynamic-background-color-changer">Dynamic Background Color Changer</a></li>
+            <li><a href="#simple-to-do-list">Simple To-Do List</a></li>
+            <li><a href="#image-gallery">Image Gallery</a></li>
+        </ul>
+    </nav>
 
-    <textarea id="text" rows="10" cols="50" placeholder="Enter your text..."></textarea>
-    <br>
+    <div id="live-character-counter">
+        <h2>Live Character Counter</h2>
 
-    <p>Characters: <span id="chars"></span></p>
-    <br>
+        <textarea id="text" rows="10" cols="50" placeholder="Enter your text..."></textarea>
+        <br>
 
-    <h2>Simple Calculator</h2>
+        <p>Characters: <span id="chars"></span></p>
+        <br>
+    </div>
 
-    <input type="number" id="num1" placeholder="Enter first number" />
-    <input type="number" id="num2" placeholder="Enter second number" />
-    <br><br>
+    <div id="simple-calculator">
+        <h2>Simple Calculator</h2>
 
-    <button id="add">+</button>
-    <button id="subtract">-</button>
-    <button id="multiply">x</button>
-    <button id="divide">/</button>
-    <button id="clear">clear</button>
+        <input type="number" id="num1" placeholder="Enter first number" />
+        <input type="number" id="num2" placeholder="Enter second number" />
+        <br><br>
 
-    <p id="result"></p>
-    <br>
+        <button id="add">+</button>
+        <button id="subtract">-</button>
+        <button id="multiply">x</button>
+        <button id="divide">/</button>
+        <button id="clear">clear</button>
 
-    <h2>Dynamic Background Color Changer</h2>
+        <p id="result"></p>
+        <br>
+    </div>
 
-    <input type="number" id="r" placeholder="Enter a number (0 - 255)"><br>
-    <input type="number" id="g" placeholder="Enter a number (0 - 255)"><br>
-    <input type="number" id="b" placeholder="Enter a number (0 - 255)"><br>
-    <button id="reset">Reset</button>
+    <div id="dynamic-background-color-changer">
+        <h2>Dynamic Background Color Changer</h2>
 
-    <h2>Simple To-Do List</h2>
+        <input type="number" id="r" placeholder="Enter a number (0 - 255)"><br>
+        <input type="number" id="g" placeholder="Enter a number (0 - 255)"><br>
+        <input type="number" id="b" placeholder="Enter a number (0 - 255)"><br>
+        <button id="reset">Reset</button>
+    </div>
 
-    <input id="task" placeholder="Enter a task...">
-    <button id="addTask">Add</button>
-    <br>
+    <div id="simple-to-do-list">
+        <h2>Simple To-Do List</h2>
 
-    <ul id="tasklist"></ul>
+        <input id="task" placeholder="Enter a task...">
+        <button id="addTask">Add</button>
+        <br>
+
+        <ul id="tasklist"></ul>
+
+    </div>
+
+    <div id="image-gallery">
+        <h2>Image Gallery</h2>
     
+        <div class="gallery">
+            <img src="./img/amira.jpg" alt="amira" class="thumbnail">
+            <img src="./img/kylo.jpg" alt="kylo" class="thumbnail">
+            <img src="./img/dade.jpg" alt="dade" class="thumbnail">
+            <img src="./img/mame.jpg" alt="mame" class="thumbnail">
+        </div>
+
+        <div class="preview">
+            <img id="main-image" src="./img/placeholder-image.jpg" alt="main-display">
+        </div>
+    </div>
 </body>
 </html>
